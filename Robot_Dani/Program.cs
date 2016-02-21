@@ -119,7 +119,7 @@ namespace Robot_Dani
 
             double jelenlegiTav = 0;
 
-            List<double> lepesFloats = new List<double>();
+            List<double> lepesDoubles = new List<double>();
 
             foreach (char c in lista[sorszam].Program)
             {
@@ -138,7 +138,7 @@ namespace Robot_Dani
                 }
 
                 jelenlegiTav = (double) Math.Sqrt(Math.Pow(lista[sorszam].EDpos, 2) + Math.Pow(lista[sorszam].KNpos, 2));
-                lepesFloats.Add(jelenlegiTav);
+                lepesDoubles.Add(jelenlegiTav);
             }
 
             #region Kiíratás
@@ -147,8 +147,8 @@ namespace Robot_Dani
                               ((lista[sorszam].Egyszerusitheto) ? "egyszerusitheto." : "nem egyszerusitheto."));
 
             Console.WriteLine("A(z)  " + (sorszam + 1) + ". utasitassor vegrehajtasa soran a robot a "
-                              + (lepesFloats.IndexOf(lepesFloats.Max()) + 1) +
-                              ". lepeskor elerte a maximalis tavolsagot: " + lepesFloats.Max().ToString("F3") +
+                              + (lepesDoubles.IndexOf(lepesDoubles.Max()) + 1) +
+                              ". lepeskor elerte a maximalis tavolsagot: " + lepesDoubles.Max().ToString("F3") +
                               " egyseg.");
 
             Console.WriteLine("Hogy visszaterjen a kiindulopontba, az ED tengelyen "
