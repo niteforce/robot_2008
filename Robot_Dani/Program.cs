@@ -132,6 +132,7 @@ namespace Robot_Dani
                 else
                 {
                     if (c == 'K') lista[sorszam].KNpos++;
+                    else
                     {
                         lista[sorszam].KNpos--;
                     }
